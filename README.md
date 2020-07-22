@@ -6,7 +6,7 @@ Additional iRule to limit access based on IP to the Exchange EWS service. Only a
 2. Create iRule Data Group List *Local Traffic > iRules > Data Group List*
     2. Create a new list  
     Name: **Exchange_EWS_Allowed_IP**  
-    Type: **Address**
+    Type: **Address**  
     3. Add addresses to the list using the following convention: [Address] := [Value]  
     For example: 
     ```
