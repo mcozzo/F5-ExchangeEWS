@@ -1,8 +1,10 @@
 # F5 iRule for Exchange access to EWS
 Additional iRule to limit access based on IP to the Exchange EWS service. Only addresses listed in the Data Group are allowed access, otherwise return 404. 
 
-## Steps
-1. Create iRule and import code  
+## Install Steps
+1. Create iRule *Local Traffic > iRules > Data Group List*  
+   1. Create **Exchange_EWS_Allowed_IP** iRule
+   2. Paste code
 2. Create iRule Data Group List *Local Traffic > iRules > Data Group List*  
     1. Create a new list  
     Name: **Exchange_EWS_Allowed_IP**  
@@ -16,5 +18,5 @@ Additional iRule to limit access based on IP to the Exchange EWS service. Only a
     x.x.x.x := ServiceName
     ```
 3. Deploy iApp for exchange. 
-    1. In the iApp config section select *Customize pool settings*
-    2. Add the *Exchange_EWS_Allowed_IP* iRule
+    1. In the iApp config section select **Customize pool settings**
+    2. Add the **Exchange_EWS_Allowed_IP** iRule
