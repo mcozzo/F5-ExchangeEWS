@@ -4,7 +4,7 @@
 
 when HTTP_REQUEST {
     switch -glob -- [string tolower [HTTP::path]] {
-    "/ews*" {
+       "/ews*" {
             ## Exchange Web Services.
             if { [class match [IP::client_addr] equals Exchange_EWS_Allowed_IP ] } {
                 return
