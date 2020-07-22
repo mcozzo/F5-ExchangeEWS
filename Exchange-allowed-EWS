@@ -1,0 +1,15 @@
+when HTTP_REQUEST {
+    switch -glob -- [string tolower [HTTP::path]] {
+    "/ews*" {
+            ## Exchange Web Services.
+            if { [class match [IP::client_addr] equals EWS-Allowed ] } {
+                return
+            } else {
+                HTTP::respond 404
+            }
+        }
+        default {
+            return
+        }
+    }
+}
