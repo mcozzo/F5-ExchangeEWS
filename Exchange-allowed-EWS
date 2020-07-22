@@ -1,8 +1,12 @@
+# Requires data group Exchange_EWS_Allowed_IP,  type = Address
+# Add specific IP addresses that are allowed access to the EWS config. 
+# The switch -glob is sourced straight from the combined_pool_irule7 provided by the f5.microsoft_exchange_2016.v1.0.2 iApp	
+
 when HTTP_REQUEST {
     switch -glob -- [string tolower [HTTP::path]] {
     "/ews*" {
             ## Exchange Web Services.
-            if { [class match [IP::client_addr] equals EWS-Allowed ] } {
+            if { [class match [IP::client_addr] equals Exchange_EWS_Allowed_IP ] } {
                 return
             } else {
                 HTTP::respond 404
