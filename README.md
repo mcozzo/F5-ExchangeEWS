@@ -2,12 +2,12 @@
 Additional iRule to limit access based on IP to the Exchange EWS service. Only addresses listed in the Data Group are allowed access, otherwise return 404. 
 
 ## Steps
-1. Create iRule and import code
-2. Create iRule Data Group List *Local Traffic > iRules > Data Group List*
-    2. Create a new list  
+1. Create iRule and import code  
+2. Create iRule Data Group List *Local Traffic > iRules > Data Group List*  
+    1. Create a new list  
     Name: **Exchange_EWS_Allowed_IP**  
     Type: **Address**  
-    3. Add addresses to the list using the following convention: [Address] := [Value]  
+    2. Add addresses to the list using the following convention: [Address] := [Value]  
     For example: 
     ```
     10.0.0.0/8 := RFC1918-10
