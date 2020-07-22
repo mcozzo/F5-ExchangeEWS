@@ -1,4 +1,4 @@
-# F5 iRule for Exachange access to EWS
+# F5 iRule for Exchange access to EWS
 Additional iRule to limit access based on IP to the Exchange EWS service. Only addresses listed in the Data Group are allowed access, otherwise return 404. 
 
 ## Steps
