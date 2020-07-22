@@ -5,7 +5,7 @@
 2. Create iRule Data Group List
     1. Local Traffic > iRules > Data Group List
     2. Create a new list named *Exchange_EWS_Allowed_IP* Type = Address
-    3. Add addresses to the list using the following convention: [Address] := [Value]
+    3. Add addresses to the list using the following convention: [Address] := [Value]  
     For example: 
     ```
     10.0.0.0/8 := RFC1918-10
